@@ -4,49 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Mango Store</title>
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Mango Mama - Rajshahi</title>
+    <meta name="description"
+        content="Pre-order next season's premium, hand-picked Rajshahi mangoes from Mango Mama. Easy, fast, and direct-to-home delivery.">
+    <meta name="keywords"
+        content="Rajshahi Mango, Mango Mama, Buy Mangoes Bangladesh, Fresh Mango Pre-order, Premium Mangoes">
+    <meta name="author" content="Mango Mama">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mango Mama - Premium Rajshahi Mango Hub Pre-orders">
+    <meta property="og:description"
+        content="Pre-order next season's premium, hand-picked Rajshahi mangoes from Mango Mama. Easy, fast, and direct-to-home delivery.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Mango Mama - Premium Rajshahi Mango Hub Pre-orders">
+    <meta property="twitter:description"
+        content="Pre-order next season's premium, hand-picked Rajshahi mangoes from Mango Mama. Easy, fast, and direct-to-home delivery.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind Play CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+<body
+    class="bg-gradient-to-br from-amber-50 via-orange-50/60 to-yellow-100/70 min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
 
-    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md border border-gray-100">
-        <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-2">🥭 Rajshahi Mango Hub</h2>
-        <p class="text-gray-500 text-center text-sm mb-6">Enter your details to pre-order next season's premium harvest.
-        </p>
+    <div
+        class="bg-white/80 backdrop-blur-md p-6 sm:p-8 rounded-3xl shadow-2xl shadow-orange-100/50 w-full max-w-md border border-orange-100/80 transition-all duration-300 hover:shadow-orange-200/60">
+        <div class="text-center mb-6">
+            <span
+                class="inline-block px-3 py-1 text-xs font-semibold text-amber-700 bg-amber-100 rounded-full mb-3 animate-pulse">🥭
+                Season Pre-orders Live</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Rajshahi Mango Hub</h1>
+            <p class="text-gray-500 text-sm mt-2">Enter your phone number to pre-order next season's premium hand-picked
+                harvest.</p>
+        </div>
 
         <form id="orderForm" class="space-y-5">
             <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
+                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
                 <input type="text" id="phone" name="phone" required placeholder="e.g., 01711223344"
-                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:outline-none transition-all">
+                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:outline-none transition-all bg-white/90 shadow-sm placeholder:text-gray-400">
             </div>
 
-            <div id="dynamicFields" class="space-y-5 hidden">
-                <div id="welcomeMessage" class="p-3 rounded-lg text-xs font-medium"></div>
+            <div id="dynamicFields" class="space-y-5 hidden transition-all duration-500 ease-in-out">
+                <div id="welcomeMessage" class="p-3.5 rounded-xl text-xs sm:text-sm font-medium transition-all"></div>
 
                 <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
+                    <label for="name" class="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
                     <input type="text" id="name" name="name" required
-                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:outline-none bg-gray-50">
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:outline-none bg-gray-50/80 shadow-sm transition-all">
                 </div>
 
                 <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Delivery Address</label>
-                    <textarea id="address" name="address" required rows="2"
-                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:outline-none"></textarea>
+                    <label for="address" class="block text-sm font-semibold text-gray-700 mb-1">Delivery Address</label>
+                    <textarea id="address" name="address" required rows="2" placeholder="Enter your full home address"
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:outline-none shadow-sm transition-all"></textarea>
                 </div>
 
                 <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Preferable Quantity (kg)</label>
+                    <label for="quantity" class="block text-sm font-semibold text-gray-700 mb-1">Preferable Quantity
+                        (kg)</label>
                     <input type="number" id="quantity" name="quantity" required min="1" step="0.5"
-                        placeholder="Enter weight in kg"
-                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        placeholder="Enter weight in kg (e.g. 10)"
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:outline-none shadow-sm transition-all">
                 </div>
 
-                <button type="submit"
-                    class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-4 rounded-lg shadow-md transition-all cursor-pointer">
-                    Confirm Mango Order
+                <button type="submit" id="submitBtn"
+                    class="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer flex items-center justify-center gap-2">
+                    <span>Confirm Mango Order</span>
+                    <span>→</span>
                 </button>
             </div>
         </form>
@@ -75,18 +117,20 @@
                     if (data.exists) {
                         // Returning Customer Workflow
                         welcomeMessage.textContent = `🌟 Welcome back, ${data.name}! We've pre-filled your profile.`;
-                        welcomeMessage.className = "p-3 rounded-lg text-xs font-medium bg-green-50 text-green-700 border border-green-200";
+                        welcomeMessage.className = "p-3.5 rounded-xl text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200/80 shadow-sm";
 
                         nameInput.value = data.name;
                         nameInput.readOnly = true; // Lock identity modification
+                        nameInput.classList.add('bg-gray-100', 'text-gray-500');
                         addressInput.value = data.address; // Keep open for manual update adjustments
                     } else {
                         // Brand New Customer Workflow
                         welcomeMessage.textContent = "👋 New customer profile detected. Welcome onboard!";
-                        welcomeMessage.className = "p-3 rounded-lg text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200";
+                        welcomeMessage.className = "p-3.5 rounded-xl text-xs sm:text-sm font-medium bg-blue-50 text-blue-800 border border-blue-200/80 shadow-sm";
 
                         nameInput.value = "";
                         nameInput.readOnly = false;
+                        nameInput.classList.remove('bg-gray-100', 'text-gray-500');
                         addressInput.value = "";
                     }
                 } catch (error) {
@@ -118,6 +162,7 @@
                     alert('🎉 ' + result.message);
                     orderForm.reset();
                     dynamicFields.classList.add('hidden');
+                    nameInput.classList.remove('bg-gray-100', 'text-gray-500');
                 } else {
                     alert('Submission error: ' + result.detail);
                 }
